@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - Jewelry</title>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body class="shop">
+
+<header class="navbar">
+  <div class="hamburger" id="hamburger">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="nav-center">
+    <div class="logo" data-lang="logo">Jewelry 💎</div>
+  </div>
+  <div class="nav-right">
+    <select id="languageSelect">
+      <option value="English">English</option>
+      <option value="Arabic">Arabic</option>
+      <option value="French">French</option>
+      <option value="Spanish">Spanish</option>
+    </select>
+  </div>
+</header>
+
+
+<div class="nav-left" id="navMenu">
+  <a href="../index.html" data-lang="home">Home</a>
+  <a href="shop.html" data-lang="shop">Shop</a>
+  <a href="../contact/contact.html" data-lang="contact">Contact</a>
+  <a href="../limitededition/limitededition.html" data-lang="limited">Limited Edition</a>
+  <a href="../testimonials/testimonials.html" data-lang="testimonials">Testimonials</a>
+  <a href="../cart/cart.html" data-lang="cart">Cart</a>
+  <a href="../account/account.html" data-lang="account">Account</a>
+  <a href="../about/about.html" data-lang="about">About</a>
+</div>
+
+<h1 class="shop-title">Discover the Art of Jewelry</h1>
+
+
+<div class="category" onclick="toggleSub(this)">
+  <h2>Men</h2>
+  <div class="subcategory">
+    <button onclick="showItems(event, 'men-chains')">Chains</button>
+    <button onclick="showItems(event, 'men-rings')">Wedding Rings</button>
+    <button onclick="showItems(event, 'men-bracelets')">Bracelets</button>
+  </div>
+
+  <div id="men-chains" class="items">
+    <div class="card" onclick="goToProduct({name:'The Classic Snake', price:'$120.000', img:'../images/WhatsApp Image 2025-10-21 at 8.58.06 AM.jpeg', desc:'Classic snake chain', material:'Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 8.58.06 AM.jpeg" alt="The Classic Snake">
+      <h3>The Classic Snake</h3>
+      <p>$120.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Medium Curb', price:'$140.000', img:'../images/WhatsApp Image 2025-10-21 at 8.58.07 AM (1).jpeg', desc:'Medium curb chain', material:'Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 8.58.07 AM (1).jpeg" alt="The Medium Curb">
+      <h3>The Medium Curb</h3>
+      <p>$140.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Minimalist Rope', price:'$180.000', img:'../images/WhatsApp Image 2025-10-21 at 8.58.07 AM.jpeg', desc:'Minimalist rope chain', material:'Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 8.58.07 AM.jpeg" alt="The Minimalist Rope">
+      <h3>The Minimalist Rope</h3>
+      <p>$180.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Iced Cuban Collar', price:'$200.000', img:'../images/WhatsApp Image 2025-10-21 at 8.58.08 AM (1).jpeg', desc:'Iced Cuban collar chain', material:'Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 8.58.08 AM (1).jpeg" alt="The Iced Cuban Collar">
+      <h3>The Iced Cuban Collar</h3>
+      <p>$200.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Layered Diamond Tennis', price:'$210.000', img:'../images/WhatsApp Image 2025-10-21 at 8.58.08 AM.jpeg', desc:'Layered diamond tennis chain', material:'White Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 8.58.08 AM.jpeg" alt="The Layered Diamond Tennis">
+      <h3>The Layered Diamond Tennis</h3>
+      <p>$210.000</p>
+    </div>
+  </div>
+
+  <div id="men-rings" class="items">
+    <div class="card" onclick="goToProduct({name:'The Classic Band', price:'$350.000', img:'../images/WhatsApp Image 2025-10-21 at 9.03.32 AM (2).jpeg', desc:'Classic wedding band', material:'Gold', size:'10', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.03.32 AM (2).jpeg" alt="The Classic Band">
+      <h3>The Classic Band</h3>
+      <p>$350.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Eternity Ring', price:'$400.000', img:'../images/WhatsApp Image 2025-10-21 at 9.03.31 AM (3).jpeg', desc:'Eternity diamond ring', material:'Platinum', size:'9', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.03.31 AM (3).jpeg" alt="The Eternity Ring">
+      <h3>The Eternity Ring</h3>
+      <p>$400.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Eternity Ring', price:'$450.000', img:'../images/WhatsApp Image 2025-10-21 at 9.03.32 AM (1).jpeg', desc:'Diamond eternity ring', material:'White Gold', size:'11', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.03.32 AM (1).jpeg" alt="The Eternity Ring">
+      <h3>The Eternity Ring</h3>
+      <p>$450.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Dual-Tone Set', price:'$500.000', img:'../images/WhatsApp Image 2025-10-21 at 9.03.31 AM.jpeg', desc:'Dual-tone wedding set', material:'Gold & Platinum', size:'10', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.03.31 AM.jpeg" alt="The Dual-Tone Set">
+      <h3>The Dual-Tone Set</h3>
+      <p>$500.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Modern Solitaire', price:'$550.000', img:'../images/WhatsApp Image 2025-10-21 at 9.03.32 AM (1).jpeg', desc:'Modern solitaire ring', material:'White Gold', size:'9', rating:'★★★★☆'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.03.32 AM (1).jpeg" alt="The Modern Solitaire">
+      <h3>The Modern Solitaire</h3>
+      <p>$550.000</p>
+    </div>
+  </div>
+
+  <div id="men-bracelets" class="items">
+    <div class="card" onclick="goToProduct({name:'The Diamond Tennis Bracelet', price:'$350.000', img:'../images/WhatsApp Image 2025-10-21 at 9.08.13 AM.jpeg', desc:'Diamond tennis bracelet', material:'Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.08.13 AM.jpeg" alt="The Diamond Tennis Bracelet">
+      <h3>The Diamond Tennis Bracelet</h3>
+      <p>$350.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Pave Block Link', price:'$170.000', img:'../images/WhatsApp Image 2025-10-21 at 9.08.13 AM (2).jpeg', desc:'Pave block link bracelet', material:'Gold', size:'M', rating:'★★★★☆'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.08.13 AM (2).jpeg" alt="The Pave Block Link">
+      <h3>The Pave Block Link</h3>
+      <p>$170.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Iced Cuban Link', price:'$190.000', img:'../images/WhatsApp Image 2025-10-21 at 9.08.13 AM (1).jpeg', desc:'Iced Cuban link bracelet', material:'Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.08.13 AM (1).jpeg" alt="The Iced Cuban Link">
+      <h3>The Iced Cuban Link</h3>
+      <p>$190.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The White Gold Curb Chain', price:'$200.000', img:'../images/WhatsApp Image 2025-10-21 at 12.03.10 AM (2).jpeg', desc:'White gold curb chain bracelet', material:'White Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 12.03.10 AM (2).jpeg" alt="The White Gold Curb Chain">
+      <h3>The White Gold Curb Chain</h3>
+      <p>$200.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Heavyweight Gold Cuban', price:'$220.000', img:'../images/WhatsApp Image 2025-10-21 at 9.10.15 AM.jpeg', desc:'Heavyweight gold Cuban bracelet', material:'Gold', size:'XL', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 9.10.15 AM.jpeg" alt="The Heavyweight Gold Cuban">
+      <h3>The Heavyweight Gold Cuban</h3>
+      <p>$220.000</p>
+    </div>
+  </div>
+</div>
+
+<div class="category" onclick="toggleSub(this)">
+  <h2>Women</h2>
+  <div class="subcategory">
+    <button onclick="showItems(event, 'women-necklaces')">Necklaces</button>
+    <button onclick="showItems(event, 'women-rings')">Rings</button>
+    <button onclick="showItems(event, 'women-bracelets')">Bracelets</button>
+    <button onclick="showItems(event, 'women-sets')">Full Set</button>
+  </div>
+
+
+  <div id="women-necklaces" class="items">
+    <div class="card" onclick="goToProduct({name:'Lariat Necklace', price:'$350.000', img:'../images/WhatsApp Image 2025-10-20 at 11.44.20 PM (2).jpeg', desc:'Elegant lariat necklace', material:'Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-20 at 11.44.20 PM (2).jpeg" alt="Lariat Necklace">
+      <h3>Lariat Necklace</h3>
+      <p>$350.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'Glimmer Choker', price:'$450.000', img:'../images/6319a0763da5997e4d6b2314c53b0d89.jpg', desc:'Sparkling choker', material:'Platinum', size:'M', rating:'★★★★★'})">
+      <img src="../images/6319a0763da5997e4d6b2314c53b0d89.jpg" alt="Glimmer Choker">
+      <h3>Glimmer Choker</h3>
+      <p>$450.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Cascade', price:'$300.000', img:'../images/7bd23cd9b5c7b592ea041fb944d3104f.jpg', desc:'Flowing cascade necklace', material:'Gold', size:'M', rating:'★★★★☆'})">
+      <img src="../images/7bd23cd9b5c7b592ea041fb944d3104f.jpg" alt="The Cascade">
+      <h3>The Cascade</h3>
+      <p>$300.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Lumina', price:'$420.000', img:'../images/bd2bef84b77cdd4642789775f890b3c5.jpg', desc:'Shimmering lumina necklace', material:'Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/bd2bef84b77cdd4642789775f890b3c5.jpg" alt="The Lumina">
+      <h3>The Lumina</h3>
+      <p>$420.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Duet', price:'$500.000', img:'../images/51af57188d560daa267f250e9f482592.jpg', desc:'Elegant statement necklace', material:'Gold', size:'L', rating:'★★★★★'})">
+      <img src="../images/51af57188d560daa267f250e9f482592.jpg" alt="The Duet">
+      <h3>The Duet</h3>
+      <p>$500.000</p>
+    </div>
+  </div>
+
+  <div id="women-rings" class="items">
+    <div class="card" onclick="goToProduct({name:'The Empress Ring', price:'$260.000', img:'../images/WhatsApp Image 2025-10-21 at 2.58.53 AM (2).jpeg', desc:'Elegant ring for special occasions', material:'Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 2.58.53 AM (2).jpeg" alt="The Empress Ring">
+      <h3>The Empress Ring</h3>
+      <p>$260.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Dynasty Ring', price:'$280.000', img:'../images/WhatsApp Image 2025-10-21 at 2.58.53 AM (1).jpeg', desc:'Regal design ring', material:'Platinum', size:'M', rating:'★★★★☆'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 2.58.53 AM (1).jpeg" alt="The Dynasty Ring">
+      <h3>The Dynasty Ring</h3>
+      <p>$280.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Legacy Ring', price:'$300.000', img:'../images/WhatsApp Image 2025-10-21 at 2.58.53 AM.jpeg', desc:'Classic legacy ring', material:'White Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 2.58.53 AM.jpeg" alt="The Legacy Ring">
+      <h3>The Legacy Ring</h3>
+      <p>$300.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Sovereign Ring', price:'$330.000', img:'../images/WhatsApp Image 2025-10-21 at 2.58.54 AM (1).jpeg', desc:'Sovereign styled ring', material:'Gold', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 2.58.54 AM (1).jpeg" alt="The Sovereign Ring">
+      <h3>The Sovereign Ring</h3>
+      <p>$330.000</p>
+    </div>
+    <div class="card" onclick="goToProduct({name:'The Covenant Ring', price:'$350.000', img:'../images/WhatsApp Image 2025-10-21 at 3.04.32 AM.jpeg', desc:'Elegant covenant ring', material:'Platinum', size:'M', rating:'★★★★★'})">
+      <img src="../images/WhatsApp Image 2025-10-21 at 3.04.32 AM.jpeg" alt="The Covenant Ring">
+      <h3>The Covenant Ring</h3>
+      <p>$350.000</p>
+    </div>
+  </div>
+</div>
+
+<div id="women-bracelets" class="items">
+  <div class="card" onclick="goToProduct({name:'The Eternal Cascade', price:'$200.000', img:'../images/6894f4024b550c3c970428ee0aec25f2.jpg', desc:'Elegant flowing bracelet', material:'Gold', size:'M', rating:'★★★★★'})">
+    <img src="../images/6894f4024b550c3c970428ee0aec25f2.jpg" alt="The Eternal Cascade">
+    <h3>The Eternal Cascade</h3>
+    <p>$200.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Trinity Band', price:'$220.000', img:'../images/WhatsApp Image 2025-10-21 at 12.28.42 AM (2).jpeg', desc:'Three-band stylish bracelet', material:'White Gold', size:'M', rating:'★★★★☆'})">
+    <img src="../images/WhatsApp Image 2025-10-21 at 12.28.42 AM (2).jpeg" alt="The Trinity Band">
+    <h3>The Trinity Band</h3>
+    <p>$220.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Delicate Line', price:'$240.000', img:'../images/b651180d72db50bfb44003a355da3982.jpg', desc:'Delicate gold bracelet', material:'Gold', size:'M', rating:'★★★★☆'})">
+    <img src="../images/b651180d72db50bfb44003a355da3982.jpg" alt="The Delicate Line">
+    <h3>The Delicate Line</h3>
+    <p>$240.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Rose Gold Charms', price:'$260.000', img:'../images/WhatsApp Image 2025-10-21 at 3.33.46 AM (1).jpeg', desc:'Rose gold charm bracelet', material:'Rose Gold', size:'M', rating:'★★★★★'})">
+    <img src="../images/WhatsApp Image 2025-10-21 at 3.33.46 AM (1).jpeg" alt="The Rose Gold Charms">
+    <h3>The Rose Gold Charms</h3>
+    <p>$260.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'Majestic Weave', price:'$280.000', img:'../images/WhatsApp Image 2025-10-21 at 3.33.46 AM.jpeg', desc:'Majestic woven bracelet', material:'Gold', size:'M', rating:'★★★★★'})">
+    <img src="../images/WhatsApp Image 2025-10-21 at 3.33.46 AM.jpeg" alt="Majestic Weave">
+    <h3>Majestic Weave</h3>
+    <p>$280.000</p>
+  </div>
+</div>
+
+
+<div id="women-sets" class="items">
+  <div class="card" onclick="goToProduct({name:'The Purity Choker Set', price:'$600.000', img:'../images/WhatsApp Image 2025-10-21 at 3.18.52 AM.jpeg', desc:'Elegant choker and earring set', material:'Gold', size:'M', rating:'★★★★★'})">
+    <img src="../images/WhatsApp Image 2025-10-21 at 3.18.52 AM.jpeg" alt="The Purity Choker Set">
+    <h3>The Purity Choker Set</h3>
+    <p>$600.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Solitaire Stream Set', price:'$620.000', img:'../images/WhatsApp Image 2025-10-21 at 3.18.53 AM (1).jpeg', desc:'Solitaire necklace and bracelet set', material:'Platinum', size:'M', rating:'★★★★★'})">
+    <img src="../images/WhatsApp Image 2025-10-21 at 3.18.53 AM (1).jpeg" alt="The Solitaire Stream Set">
+    <h3>The Solitaire Stream Set</h3>
+    <p>$620.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Plunge Festoon Set', price:'$650.000', img:'../images/WhatsApp Image 2025-10-21 at 3.18.53 AM.jpeg', desc:'Festoon necklace and bracelet set', material:'Gold', size:'M', rating:'★★★★☆'})">
+    <img src="../images/WhatsApp Image 2025-10-21 at 3.18.53 AM.jpeg" alt="The Plunge Festoon Set">
+    <h3>The Plunge Festoon Set</h3>
+    <p>$650.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Starburst Cascade Set', price:'$670.000', img:'../images/4ad75dc0c41c2f94583641a709ab447a.jpg', desc:'Starburst cascade full set', material:'Gold', size:'M', rating:'★★★★★'})">
+    <img src="../images/4ad75dc0c41c2f94583641a709ab447a.jpg" alt="The Starburst Cascade Set">
+    <h3>The Starburst Cascade Set</h3>
+    <p>$670.000</p>
+  </div>
+  <div class="card" onclick="goToProduct({name:'The Bow Lariat Set', price:'$1.000.000', img:'../images/8caa8ab575908333a7d8a1de8e9024cf.jpg', desc:'Bow lariat statement set', material:'Gold', size:'M', rating:'★★★★★'})">
+    <img src="../images/8caa8ab575908333a7d8a1de8e9024cf.jpg" alt="The Bow Lariat Set">
+    <h3>The Bow Lariat Set</h3>
+    <p>$1.000.000</p>
+  </div>
+</div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3 data-lang="footerAbout">About Us</h3>
+      <p data-lang="footerText">Luxury jewelry designs made to make you shine and express your style.</p>
+    </div>
+    <div class="footer-section links">
+      <h3 data-lang="footerQuickLinks">Quick Links</h3>
+      <ul>
+        <li><a href="../index.html" data-lang="home">Home</a></li>
+        <li><a href="shop.html" data-lang="shop">Shop</a></li>
+        <li><a href="../contact/contact.html" data-lang="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section social">
+      <h3 data-lang="footerFollowUs">Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
+  </div>
+  <div class="footer-bottom" data-lang="footerCopyright">
+    &copy; 2025 Jewelry. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="shop.js"></script>
+
+</body>
+</html>
+
