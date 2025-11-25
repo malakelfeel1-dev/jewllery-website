@@ -1,0 +1,84 @@
+body.contact {
+  font-family: "Poppins", sans-serif;
+  background: #f7f3f0;
+  color: #444;
+}
+
+
+body.contact .container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body.contact h1 {
+  text-align: center;
+  color: #c9a063;
+  margin-bottom: 20px;
+}
+
+body.contact input,
+body.contact textarea,
+body.contact button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+body.contact button {
+  background: #c9a063;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+body.contact button:hover {
+  background: #b38b4e;
+}
+
+
+body.contact .contact-info,
+body.contact .social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+body.contact .contact-info p,
+body.contact .social-links a {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+  text-decoration: none;
+}
+
+body.contact .social-links a {
+  margin: 0 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+body.contact .social-links a:hover {
+  color: #c9a063;
+}
+
+
+body.contact form {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  body.contact .container {
+    padding: 20px;
+    margin: 60px auto;
+  }
+}
+

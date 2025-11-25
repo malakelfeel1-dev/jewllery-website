@@ -1,0 +1,121 @@
+
+body.account {
+  background: url('../images/4ad75dc0c41c2f94583641a709ab447a.jpg') no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  width: 380px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 80px auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.tab.active {
+  border-bottom: 2px solid #c9a063;
+  color: #c9a063;
+}
+
+form {
+  display: none;
+  flex-direction: column;
+}
+
+form.active {
+  display: flex;
+}
+
+.account-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.account-container input:focus {
+  border-color: #c9a063;
+  box-shadow: 0 0 5px rgba(201, 160, 99, 0.4);
+}
+
+.account-container button {
+  background: #c9a063;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.account-container button:hover {
+  background: #b2894d;
+  transform: translateY(-2px);
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 3rem; 
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 40px;
+  font-size: 16px;
+  outline: none;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;      
+  top: 30%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;   
+  color: #444;
+  z-index: 10;
+}
+
+.toggle-password:hover {
+  color: #c9a063;   
+}
+
+.toggle-password:focus {
+  outline: 2px solid #c9a063; 
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .account-container {
+    width: 90%;
+    margin: 60px auto;
+  }
+}
+

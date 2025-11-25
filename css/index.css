@@ -1,0 +1,505 @@
+
+body.home {
+  background: url('../images/home.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+body.home .live-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+body.home .chat-header {
+  background-color: #f0c040;
+  color: #222;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+body.home .chat-header:hover {
+  background-color: #d4a017;
+}
+
+body.home .chat-body {
+  background-color: #fff;
+  border: 1px solid #f0c040;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  display: none;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+body.home .chat-body.open {
+  display: block;
+}
+
+body.home .chat-messages {
+  margin-bottom: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+body.home .message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+body.home .bot-message {
+  background-color: #f5f5f5;
+  text-align: left;
+}
+
+body.home .user-message {
+  background-color: #f0c040;
+  text-align: right;
+  color: #222;
+}
+
+body.home .chat-input-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+body.home .chat-body input[type="text"] {
+  width: calc(100% - 60px);
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+body.home .chat-body input[type="text"]:focus {
+  border-color: #f0c040;
+}
+
+body.home .chat-body button {
+  padding: 5px 10px;
+  background-color: #f0c040;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #222;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+body.home .chat-body button:hover {
+  background-color: #d4a017;
+}
+
+.hero {
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-size 0.3s ease;
+  margin-top: 65px;
+  opacity: 0;
+  animation: heroFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero:hover {
+  transform: scale(1.02);
+  background-size: 110%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.hero:hover::before {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 700px;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: heroContentFadeIn 1.5s ease-out 0.3s forwards;
+}
+
+@keyframes heroContentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero:hover .hero-content {
+  transform: translateY(-10px);
+}
+
+.hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  line-height: 1.2;
+  opacity: 0;
+  animation: heroTitleFadeIn 1s ease-out 0.9s forwards;
+}
+
+@keyframes heroTitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero:hover .hero-content h2 {
+  transform: scale(1.05);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+  opacity: 0;
+  animation: heroTextFadeIn 1s ease-out 1.2s forwards;
+}
+
+@keyframes heroTextFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero:hover .hero-content p {
+  color: #fff;
+}
+
+.hero-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #f0c040;
+  margin-bottom: 15px;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  opacity: 0;
+  animation: heroQuoteFadeIn 1s ease-out 0.6s forwards;
+}
+
+@keyframes heroQuoteFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero:hover .hero-quote {
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+.hero-content .btn {
+  text-decoration: none;
+  background-color: #f0c040;
+  color: #222;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: heroBtnFadeIn 1s ease-out 1.5s forwards;
+}
+
+@keyframes heroBtnFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-content .btn:hover {
+  background-color: #d4a017;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .btn:active {
+  transform: translateY(-1px);
+}
+
+body.home footer.site-footer {
+  background-color: rgba(34, 34, 34, 0.95);
+  margin-top: 0;
+}
+
+body.home .footer-section h3 {
+  color: #f0c040;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+body.home .footer-section p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+body.home .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+body.home .footer-section ul li {
+  margin-bottom: 8px;
+}
+
+body.home .footer-section ul li a {
+  color: #f0c040;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.home .footer-section ul li a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+body.home .footer-section.social a {
+  display: block;
+  margin-bottom: 10px;
+  color: #f0c040;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.home .footer-section.social a:hover {
+  color: #ffd700;
+  transform: translateX(5px);
+}
+
+body.home .footer-section.social a i {
+  margin-right: 8px;
+}
+
+body.home .footer-bottom {
+  color: #999;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 75vh;
+  }
+
+  .hero-content h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    margin-top: 65px;
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero-quote {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .hero-content .btn {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+
+  body.home .live-chat {
+    width: 280px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  body.home .chat-header {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  body.home .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body.home .footer-section {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 55vh;
+    min-height: 400px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-quote {
+    font-size: 16px;
+  }
+
+  .hero-content .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  body.home .live-chat {
+    width: 90%;
+    max-width: 280px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+
+body[dir="rtl"] .hero {
+  text-align: center;
+}
+
+body[dir="rtl"] .hero-content {
+  direction: rtl;
+}
+
+body[dir="rtl"] .hero-quote {
+  animation: heroQuoteFadeInRTL 1s ease-out 0.6s forwards;
+}
+
+@keyframes heroQuoteFadeInRTL {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body[dir="rtl"] body.home .live-chat {
+  right: auto;
+  left: 20px;
+}
+
+body[dir="rtl"] body.home .footer-section.social a:hover {
+  transform: translateX(-5px);
+}
+
+body[dir="rtl"] body.home .footer-section.social a i {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  body[dir="rtl"] body.home .live-chat {
+    left: 15px;
+    right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body[dir="rtl"] body.home .live-chat {
+    left: 10px;
+    right: auto;
+  }
+}

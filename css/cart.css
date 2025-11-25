@@ -1,0 +1,126 @@
+
+.cart-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 80px auto 50px;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  flex-wrap: wrap;
+}
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cart-details h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  color: #3c2f2f;
+}
+
+.cart-details p {
+  color: #c4a484;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.total {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.payment-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.payment-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #3c2f2f;
+}
+
+.payment-section input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.payment-section button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f0c040;
+  border: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.payment-section button:hover {
+  background-color: #d4a017;
+}
+
+
+.success-message {
+  display: none;
+  text-align: center;
+  background-color: #f0c040;
+  color: #222;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item img {
+    margin: 0 0 15px 0;
+  }
+
+  .total {
+    text-align: center;
+  }
+}
+
